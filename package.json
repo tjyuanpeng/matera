@@ -1,0 +1,17 @@
+{
+  "name": "matera",
+  "version": "1.0.0",
+  "description": "front end project CI/CD helper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tjyuanpeng <tjyuanpeng@gmail.com>",
+  "homepage": "https://github.com/tjyuanpeng/matera",
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/tjyuanpeng/matera.git"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@10.23.0"
+}
