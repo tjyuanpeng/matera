@@ -13,22 +13,24 @@
     "url": "https://github.com/tjyuanpeng/matera.git"
   },
   "scripts": {
-    "dev": "pnpm run watch:1; pnpm run watch:2",
-    "watch:1": "tsdown --watch",
-    "watch:2": "node --watch ./dist/index.mjs",
+    "watch:build": "tsdown --watch",
+    "watch:run": "node --watch ./dist/index.mjs",
     "build": "tsdown",
+    "start": "node ./dist/index.mjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@gitbeaker/rest": "catalog:",
     "cac": "catalog:",
-    "express": "catalog:",
+    "dotenv": "catalog:",
+    "fastify": "catalog:",
+    "pino": "catalog:",
+    "pino-pretty": "catalog:",
     "yaml": "catalog:"
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:",
     "@types/node": "catalog:",
-    "bumpp": "catalog:",
     "eslint": "catalog:",
     "eslint-plugin-format": "catalog:",
     "tsdown": "catalog:",

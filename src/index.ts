@@ -1,9 +1,6 @@
-// import { Gitlab } from '@gitbeaker/rest'
+import { test } from './gitlab'
+import { start } from './hooks'
 
-// const api = new Gitlab({
-//   token: 'personaltoken',
-// })
+start()
 
-console.log('12343335')
-
-// LoYQCu5MHAG3e25XV_AV
+test()
