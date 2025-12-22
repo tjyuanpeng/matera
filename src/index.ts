@@ -3,4 +3,4 @@ import { start } from './hooks'
 
 start()
 
-test()
+// test()
