@@ -57,7 +57,6 @@
   "explorer.fileNesting.patterns": {
     "package.json": "pnpm-lock.yaml, pnpm-workspace.yaml, .npmrc, .nvmrc",
     "eslint.config.js": ".editorconfig, .gitignore",
-    "tsdown.config.ts": "tsconfig.json",
     "README.md": "LICENSE"
   }
 }
