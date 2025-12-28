@@ -1,10 +1,14 @@
 import type { FastifyRequest } from 'fastify'
 import process from 'node:process'
+import cors from '@fastify/cors'
 import Fastify from 'fastify'
 import logger from './logger'
 
 const fastify = Fastify({
   loggerInstance: logger,
+})
+fastify.register(cors, {
+  origin: true,
 })
 fastify.addHook('preHandler', (req, _reply, done) => {
   if (req.body) {
@@ -16,7 +20,6 @@ fastify.addHook('preHandler', (req, _reply, done) => {
 fastify.get('/', async () => {
   return 'ok'
 })
-
 fastify.post('/hook', async (req: FastifyRequest<{ Body: PushBody }>) => {
   req.log.info({ type: req.body.object_kind }, 'object_kind')
   return {
@@ -24,7 +27,7 @@ fastify.post('/hook', async (req: FastifyRequest<{ Body: PushBody }>) => {
   }
 })
 
-async function start() {
+const start = async () => {
   try {
     await fastify.listen({ host: '0.0.0.0', port: 5000 })
   }

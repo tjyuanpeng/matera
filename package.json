@@ -17,12 +17,15 @@
     "watch:run": "node --watch ./dist/index.mjs",
     "build": "tsdown",
     "start": "node ./dist/index.mjs",
+    "test": "node src/version.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@fastify/cors": "catalog:",
     "@gitbeaker/rest": "catalog:",
     "cac": "catalog:",
     "dotenv": "catalog:",
+    "execa": "catalog:",
     "fastify": "catalog:",
     "pino": "catalog:",
     "pino-pretty": "catalog:",

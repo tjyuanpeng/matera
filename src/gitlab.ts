@@ -3,6 +3,7 @@ import { Gitlab } from '@gitbeaker/rest'
 import dotenv from 'dotenv'
 
 dotenv.config()
+
 async function test() {
   const api = new Gitlab({
     host: process.env.HOST,

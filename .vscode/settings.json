@@ -51,5 +51,13 @@
     "scss",
     "pcss",
     "postcss"
-  ]
+  ],
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "package.json": "pnpm-lock.yaml, pnpm-workspace.yaml, .npmrc, .nvmrc",
+    "eslint.config.js": ".editorconfig, .gitignore",
+    "tsdown.config.ts": "tsconfig.json",
+    "README.md": "LICENSE"
+  }
 }

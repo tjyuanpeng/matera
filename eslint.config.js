@@ -2,6 +2,7 @@ import antfu from '@antfu/eslint-config'
 
 export default antfu(
   {
+    lessOpinionated: true,
     typescript: true,
     formatters: {
       markdown: true,
@@ -13,6 +14,7 @@ export default antfu(
   {
     rules: {
       'no-console': 'off',
+      'style/brace-style': ['error', '1tbs', { allowSingleLine: true }],
     },
   },
 )
