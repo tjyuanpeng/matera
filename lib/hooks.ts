@@ -30,8 +30,7 @@ fastify.post('/hook', async (req: FastifyRequest<{ Body: PushBody }>) => {
 const start = async () => {
   try {
     await fastify.listen({ host: '0.0.0.0', port: 5000 })
-  }
-  catch (err) {
+  } catch (err) {
     fastify.log.error(err)
     process.exit(1)
   }
