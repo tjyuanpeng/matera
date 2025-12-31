@@ -12,20 +12,29 @@
     "type": "git",
     "url": "https://github.com/tjyuanpeng/matera.git"
   },
+  "engines": {
+    "node": ">=24",
+    "pnpm": ">=10"
+  },
   "scripts": {
-    "start": "node lib/index.ts",
-    "test": "node lib/version.ts",
+    "dev": "node -r dotenv/config  --watch-path=./lib --watch-path=./.env lib/index.ts",
+    "start": "node -r dotenv/config lib/index.ts",
     "lint": "eslint . --fix",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@fastify/autoload": "catalog:",
     "@fastify/cors": "catalog:",
+    "@fastify/http-proxy": "catalog:",
     "@gitbeaker/rest": "catalog:",
     "dotenv": "catalog:",
     "execa": "catalog:",
     "fastify": "catalog:",
+    "node-cron": "catalog:",
     "pino": "catalog:",
     "pino-pretty": "catalog:",
+    "pm2": "catalog:",
+    "sqlite-gui-node": "catalog:",
     "yaml": "catalog:"
   },
   "devDependencies": {

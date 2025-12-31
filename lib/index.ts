@@ -1,6 +1,8 @@
-// import { test } from './gitlab'
-import { start } from './hooks'
+// import { SqliteGuiNode } from 'sqlite-gui-node'
+import { start } from './app.ts'
 
 start()
 
-// test()
+// SqliteGuiNode(db, 5001).catch((err) => {
+//   console.error('Error starting the GUI:', err)
+// })
